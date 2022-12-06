@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo do Mario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-conteiner">
+        <img src="/img/chao.png" id="piso">
+        <img src="/img/pipe.png" id="pipe">
+        <img src="/img/clouds.png" id="clouds"> 
+        <img src="/img/mario.gif" id="mario"> 
+        <audio src="/audio/marioMorrendo.mp3" id="morte-mario"></audio>
+        <audio src="/audio/musicaMario.mp3" id="musica-mario"></audio>
+        <audio src="/audio/marioPulando.mp3" id="pulo-mario"></audio>
+        <div id="end-game-conteiner" class="hide">
+            <div id="ponto">
+                <p>PONTUACAO</p>
+                <p class="pontuacao">10</p>
+            </div>
+            <form>
+                <button>REINICIAR</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

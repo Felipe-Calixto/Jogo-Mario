@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Press Start 2P", cursive;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex; 
+    position: relative;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.hide {
+    display: none;
+}
+
+#game-conteiner {
+    position: relative;
+    width: 50rem;
+    height: 30rem;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgb(0, 200, 255), white);
+    border: 2px solid black;
+}
+
+#piso {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+#pipe {
+    position: absolute;
+    bottom: 2.1rem;
+    width: 4.5rem;
+    animation: pipe-animation 2s linear infinite;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -4.5rem;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+#mario {
+    position: absolute;
+    bottom: 2.2rem;
+    width: 5.2rem;
+}
+
+.jump {
+    animation: mario-jump 600ms;
+}
+
+@keyframes mario-jump {
+    0% {
+        bottom: 2.2rem;
+    }
+
+    40% {
+        bottom: 11rem;
+    }
+
+    50% {
+        bottom: 11rem;
+    }
+
+    60% {
+        bottom: 11rem;
+    }
+
+    100% {
+        bottom: 2.2rem;
+    }
+}
+
+#clouds {
+    position: absolute;
+    width: 35rem;
+    animation: clouds-animation 15s linear infinite;
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -35rem;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+.endGame {
+    animation: mario-dead-animation 3s ;
+}
+
+@keyframes mario-dead-animation {
+    50% {
+        bottom: 11rem;
+    }
+
+    100% {
+        bottom: -8rem;
+    }
+}
+
+#end-game-conteiner {
+    position: absolute;
+    padding: 2rem;
+    left: 13rem;
+    text-align: center;
+    background-color: #C2764C;
+    border: 4px dashed black;
+    color: #ffcbaf;
+    text-shadow: 1px 4px 1px rgba(0,0,0,0.9);
+}
+
+.hide-animation {
+    animation: end-game-animation 2s linear; 
+}
+
+#ponto {
+  text-align: center; 
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 2rem;
+}
+
+.pontuacao {
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+#end-game-conteiner button {
+    color: white;
+    background: none;
+    padding: .5rem;
+    border: 2px dashed white;
+    cursor: pointer;
+}
+
+#end-game-conteiner button:hover {
+    transition: .3s;
+    background: white;
+    color: #C2764C;
+}
+
+@keyframes end-game-animation {
+    from {
+        top: -20rem;
+    }
+
+
+    to {
+        top: 0;
+    }
+}
+
